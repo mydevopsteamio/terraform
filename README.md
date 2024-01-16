@@ -37,7 +37,36 @@ Naming Conventions
 
 - Never repeat resource type names like this `resource "aws_instance" "aws_ec2_instance" {` which makes our code ugly and confusing.
 
+## Issuing a Report
+
+To report an issue on our project:
+
+  1. Check the repository's [issue tracker](https://github.com/mydevopsteamio/terraform/issues) on GitHub
+  2. Check first, if the issue you are creating is already existing or not.
+  3. If you can't find an answer to your question in the documentation or issue tracker, you can ask a question by creating a new issue. Make sure to provide enough context and details.
+
+## Apache License
+
+Apache License, Version 2.0, January 2004 (https://www.apache.org/licenses/LICENSE-2.0)
+
+## Support Us
+
+Kindly support our GitHub Project, by following these steps:
+
+  1. Visit our repository: Navigate to this [GitHub repository](https://github.com/mydevopsteamio/terraform)
+
+  2. Click the "Star" button: On the repository page, you'll see a "Star" button in the upper right corner. Clicking on it will star the repository, indicating your support for the project.
+
+  3. Optionally, you can also leave a comment on the repository or open an issue to give feedback or suggest changes.
+
+Staring a repository on GitHub is a simple way to show your support and appreciation for the project. It also helps to increase the visibility of the project and make it more discoverable to others.
+
+## Who we are
+
+**TODO**
+
+
 ## TODO's
 - [ ] Automated Merge from CI
 - [ ] Automated TF Lint
-- [ ] Pre-commit config 
+- [ ] Pre-commit config
