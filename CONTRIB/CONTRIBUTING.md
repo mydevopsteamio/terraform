@@ -41,7 +41,7 @@ your PR will be rejected by the `PR` reviewer.
 
 * Each module dependencies must be submitted independently
 * Must pass the linter (`checkov` and `pre-commit`)
-* `terraform fmt -recursive <changes>` must be successful 
+* `terraform fmt -recursive <changes>` must be successful
 * Must be atleast compatible from up-to-date [Terraform](https://developer.hashicorp.com/terraform/install?product_intent=terraform) version.
 * Should follow terraform module configuration best practices [Terraform Module Best Practices](https://developer.hashicorp.com/terraform/tutorials/modules/module#module-best-practices)
   * Nested module is acceptable but must be actively maintained by third-party module.
