@@ -37,6 +37,18 @@ Naming Conventions
 
 - Never repeat resource type names like this `resource "aws_instance" "aws_ec2_instance" {` which makes our code ugly and confusing.
 
+Tools
+======
+- [pre-commit](https://pre-commit.com/)
+- [terraform-docs](https://github.com/terraform-docs/terraform-docs)
+
+To setup your local env, run the script from this repository via:
+
+```bash
+chmod +x scripts/setup-env.sh
+./scripts/setup-env.sh
+```
+
 ## Issuing a Report
 
 To report an issue on our project:
