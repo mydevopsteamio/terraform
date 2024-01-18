@@ -1,0 +1,90 @@
+/*
+ * # AWS EKS Module 💡
+ * Description
+ * ============
+ * This tf file provides eks with mostly use k8s resources TF Modules <br>
+ * ***Author***: Alfred Valderrama (@redopsbay) <br>
+*/
+
+/* Required Variables */
+variable "k8s_name" {
+  type        = string
+  description = "Define the eks cluster name"
+}
+
+variable "cluster_version" {
+  type        = string
+  description = "Define the AWS EKS Cluster version"
+}
+
+variable "vpc" {
+  type = map(object({
+    id            = string
+    subnet_ids    = list(string)
+    cp_subnet_ids = list(string)
+  }))
+  description = "VPC Configuration values"
+}
+
+variable "worker_nodes" {
+  type = list(object({
+    min_size       = number
+    max_size       = number
+    desired_size   = number
+    instance_types = list(string)
+    capacity_type  = string
+  }))
+  description = "Worker nodes configuration values"
+}
+
+variable "auth_configmap" {
+  type        = bool
+  description = "If auth configmap should be configured."
+  default     = true
+}
+
+variable "auth_configmap_roles" {
+  type = list(object({
+    role_arn = string
+    username = string
+    groups   = string
+  }))
+  default     = null
+  description = "List of object containing configmap roles. Required: if `auth_configmap` is set to true"
+}
+
+variable "auth_configmap_users" {
+  type = list(object({
+    user_arn = string
+    username = string
+    groups   = string
+  }))
+  default     = null
+  description = "List of object containing configmap users. Required: if `auth_configmap` is set to true"
+}
+
+variable "k8s_version" {
+  type        = string
+  default     = "1.29"
+  description = "Kubernetes Version"
+}
+
+variable "is_api_public" {
+  type        = bool
+  default     = true
+  description = "If API Server will be exposed publicly."
+}
+
+variable "configmap_aws_accounts" {
+  type        = list(string)
+  description = "List of account maps to add to the aws-auth configmap"
+}
+
+variable "k8s_tags" {
+  type        = map(any)
+  description = "Map of AWS resource tags"
+  default = {
+    "Provisioner" = "mydevopsteam.io"
+    "Custodian"   = "mydevopsteam.io"
+  }
+}
